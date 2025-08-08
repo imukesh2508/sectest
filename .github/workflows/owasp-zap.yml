@@ -3,6 +3,9 @@ name: OWASP ZAP Scan
 on:
   push:
   workflow_dispatch:
+permissions:
+  issues: write
+  contents: read
 
 jobs:
   zap:
