@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run OWASP ZAP Baseline Scan
-        uses: zaproxy/action-baseline@v0.0.10
+        uses: zaproxy/action-baseline@v0.14.0
         with:
           target: 'https://google-gruyere.appspot.com/'
           format: 'html'
