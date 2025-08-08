@@ -17,7 +17,7 @@ jobs:
       - name: Run OWASP ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.14.0
         with:
-          target: 'hhttps://www.hackthissite.org/'
+          target: 'https://www.hackthissite.org/'
           format: 'html'
           output: 'zap_report.html'
 
