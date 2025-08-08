@@ -1,0 +1,25 @@
+name: OWASP ZAP Scan
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  zap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run OWASP ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.0.10
+        with:
+          target: 'https://google-gruyere.appspot.com/'
+          format: 'html'
+          output: 'zap_report.html'
+
+      - name: Upload ZAP Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: zap-report
+          path: zap_report.html
