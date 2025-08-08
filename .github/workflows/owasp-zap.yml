@@ -17,7 +17,7 @@ jobs:
       - name: Run OWASP ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.14.0
         with:
-          target: 'https://google-gruyere.appspot.com/'
+          target: 'http://www.itsecgames.com/'
           format: 'html'
           output: 'zap_report.html'
 
